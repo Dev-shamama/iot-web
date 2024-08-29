@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- IonIcon Loads -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <!-- Left Side -->
+        <div class="dashboard left-side">
+          <div class="content">
+            <div class="profile">
+              <div class="profile-image">
+                <img src="./assets/img/profile-images.png" alt="" />
+              </div>
+              <div class="profile-text">
+                <p><strong>Maria Aqdas</strong></p>
+                <p><small>PH: (324) 300 300</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="content">
+            <canvas id="myChart1"></canvas>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="dashboard right-side">
+          <!-- Dashboard -->
+          <div class="content">
+            <h3>DASHBOARD</h3>
+          </div>
+
+          <!-- Meter -->
+          <div class="meter">
+            <div class="item">
+              <div class="detail">
+                <small class="title"><strong>Temperature Sensor</strong></small>
+                <div class="text">
+                  <span style="font-size: 50px">24℃</span>
+                </div>
+              </div>
+              <div class="icon-detail">
+                <ion-icon name="thermometer-outline"></ion-icon>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="detail">
+                <small class="title"><strong>Turbidity Sensor</strong></small>
+                <small class="text">Standard Value : 21-30℃</small>
+              </div>
+              <div class="progress">
+                <div class="barOverflow">
+                  <div class="bar bar3"></div>
+                </div>
+                <span class="progress-percentage">70</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="detail">
+                <small class="title"><strong>PH Sensor</strong></small>
+                <small class="text">Standard Value : 6.5-8.5</small>
+              </div>
+              <div class="progress">
+                <div class="barOverflow">
+                  <div class="bar bar2"></div>
+                </div>
+                <span class="progress-percentage">83</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="detail">
+                <small class="title"
+                  ><strong>Total Dissolved Solid</strong></small
+                >
+                <small class="text">Standard Value : 50-150 PPM</small>
+              </div>
+              <div class="progress">
+                <div class="barOverflow">
+                  <div class="bar bar1"></div>
+                </div>
+                <span class="progress-percentage">35</span>
+              </div>
+            </div>
+
+            <div class="item large">
+              <div class="detail">
+                <small class="title"
+                  ><strong>Water Level indicator</strong></small
+                >
+                <small class="text">Max: 30 Liter | Min 22 Liter</small>
+              </div>
+              <div class="progress">
+                <div class="barOverflow">
+                  <div class="bar bar4"></div>
+                </div>
+                <span class="progress-percentage">45</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert Notification -->
+          <div class="content">
+            <h3>ALERT NOTIFICATION</h3>
+          </div>
+
+          <div class="alert-notification">
+            <div class="item">
+              <div class="detail">
+                <div class="alert-icon">
+                  <ion-icon name="alert-circle-outline"></ion-icon>
+                </div>
+                <div class="text">
+                  <p>Change Water Alert</p>
+                  <small>Aquarium Change Water Time</small>
+                </div>
+              </div>
+              <div class="time-stamp"><small>Date:20-11-2024</small></div>
+            </div>
+
+            <div class="item">
+              <div class="detail">
+                <div class="alert-icon">
+                  <ion-icon name="alert-circle-outline"></ion-icon>
+                </div>
+                <div class="text">
+                  <p>Change Water Alert</p>
+                  <small>Aquarium Change Water Time</small>
+                </div>
+              </div>
+              <div class="time-stamp"><small>Date:20-11-2024</small></div>
+            </div>
+          </div>
+
+          <!-- CheckBox Button -->
+          <div class="content">
+            <h3>MODE</h3>
+          </div>
+          <!-- Mode Container -->
+          <div class="toggle-button">
+            <div class="item">
+              <div class="detail">
+                <div class="alert-icon">
+                  <ion-icon name="bulb-outline"></ion-icon>
+                </div>
+                <div class="text">
+                  <p>Light Control</p>
+                </div>
+              </div>
+              <div class="cl-toggle-switch">
+                <label class="cl-switch">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="detail">
+                <div class="alert-icon">
+                  <img src="./assets/img/oxygen.png" />
+                </div>
+                <div class="text">
+                  <p>Air Oxygen Pump</p>
+                </div>
+              </div>
+              <div class="cl-toggle-switch">
+                <label class="cl-switch">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    const ctx = document.getElementById("myChart");
+    const ctx1 = document.getElementById("myChart1");
+
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [
+          {
+            label: "Turbidity Sensor",
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1,
+            tension: 0.1,
+            backgroundColor: "#ffff",
+            borderColor: "#ffff",
+            color: "#ffff",
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              fontColor: "#ffff",
+              color: "#ffff",
+              fontSize: 18,
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              color: "white",
+              beginAtZero: true,
+            },
+          },
+          x: {
+            ticks: {
+              color: "white",
+              beginAtZero: true,
+            },
+          },
+        },
+      },
+    });
+
+    new Chart(ctx1, {
+      type: "line",
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [
+          {
+            label: "Turbidity Sensor",
+            data: [2, 10, 5, 15, 2, 8],
+            borderWidth: 1,
+            tension: 0.1,
+            backgroundColor: "#ffff",
+            borderColor: "#ffff",
+            color: "#ffff",
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              fontColor: "#ffff",
+              color: "#ffff",
+              fontSize: 18,
+            },
+          },
+        },
+        scales: {
+          y: {
+            ticks: {
+              color: "white",
+              beginAtZero: true,
+            },
+          },
+          x: {
+            ticks: {
+              color: "white",
+              beginAtZero: true,
+            },
+          },
+        },
+      },
+    });
+  </script>
+</html>

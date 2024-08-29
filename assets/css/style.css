@@ -1,0 +1,424 @@
+:root {
+  --text-color: #5c5c5c;
+  --fav-color: #0b8494;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", system-ui;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+  justify-content: start;
+  align-items: start;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.container .dashboard .content {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
+.container .dashboard.left-side {
+}
+
+.container .dashboard.right-side .content {
+  padding: 10px;
+}
+
+/* Dashboard Left Side */
+.dashboard .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.dashboard .profile .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid #ededed;
+  margin-bottom: 10px;
+}
+
+.dashboard .profile .profile-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard .profile .profile-text p {
+  color: #ffff;
+}
+
+/* Dashboard Right Side */
+.dashboard.right-side .content h3 {
+  color: #ffff;
+}
+
+.dashboard.right-side .meter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 20px;
+}
+
+.dashboard.right-side .meter .item {
+  row-gap: 20px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 40px 10px; */
+  padding: 10px;
+}
+
+.dashboard.right-side .meter .item.large {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.dashboard.right-side .meter .item .icon-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.dashboard.right-side .meter .item .icon-detail .text {
+  color: #ffff;
+  font-size: 30px;
+}
+.dashboard.right-side .meter .item .icon-detail .text sup {
+  font-size: 20px;
+}
+
+.dashboard.right-side .meter .item .icon-detail ion-icon {
+  font-size: 55px;
+  padding: 10px;
+  color: #c80036;
+}
+
+.dashboard.right-side .meter .item .detail {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 50px;
+}
+.dashboard.right-side .meter .item .detail .title {
+  font-size: 20px;
+  white-space: nowrap;
+  margin-bottom: 4px;
+  color: #ffff;
+}
+
+.dashboard.right-side .meter .item .detail .text {
+  color: #ffff;
+  font-size: 14px;
+}
+
+.dashboard.right-side .alert-notification .item {
+  row-gap: 20px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dashboard.right-side .alert-notification .item .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.dashboard.right-side .alert-notification .item .detail .alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: #ffbf27;
+  padding: 1px;
+  margin-right: 10px;
+}
+.dashboard.right-side .alert-notification .item .detail .alert-icon ion-icon {
+  font-size: 25px;
+  color: white;
+}
+
+.dashboard.right-side .alert-notification .item .detail .text p {
+  font-size: 16px;
+}
+.dashboard.right-side .alert-notification .item .detail .text small {
+  color: rgb(233, 233, 233);
+}
+
+.dashboard.right-side .toggle-button .item {
+  row-gap: 20px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dashboard.right-side .toggle-button .item .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.dashboard.right-side .toggle-button .item .detail .alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: #ffbf27;
+  padding: 1px;
+  margin-right: 10px;
+}
+.dashboard.right-side .toggle-button .item .detail .alert-icon ion-icon {
+  font-size: 25px;
+  color: white;
+}
+
+.dashboard.right-side .toggle-button .item .detail .text p {
+  font-size: 16px;
+}
+.dashboard.right-side .toggle-button .item .detail .text small {
+  color: rgb(233, 233, 233);
+}
+
+/* Progress Bar */
+.progress {
+  position: relative;
+  float: left;
+  text-align: center;
+}
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 100px;
+  height: 50px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+}
+.progress .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 7px solid #eee;
+}
+.progress .bar.bar1 {
+  border-bottom-color: #3795bd;
+  border-right-color: #3795bd;
+}
+.progress .bar.bar2 {
+  border-bottom-color: #ffd717;
+  border-right-color: #ffd717;
+}
+.progress .bar.bar3 {
+  border-bottom-color: #f30a49;
+  border-right-color: #f30a49;
+}
+.progress .bar.bar4 {
+  border-bottom-color: #03c988;
+  border-right-color: #03c988;
+}
+
+.progress-percentage {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+}
+/* ==================================================== */
+/* Toggle Switch Start */
+/* ==================================================== */
+.cl-toggle-switch {
+  position: relative;
+}
+
+.cl-switch {
+  position: relative;
+  display: inline-block;
+}
+/* Input */
+.cl-switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0, 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+/* Track */
+.cl-switch > span::before {
+  content: "";
+  float: right;
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: rgb(0, 0, 0, 0.38);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+/* Thumb */
+.cl-switch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+}
+/* Checked */
+.cl-switch > input:checked {
+  right: -10px;
+  background-color: #005eff;
+}
+
+.cl-switch > input:checked + span::before {
+  background-color: #005eff;
+}
+
+.cl-switch > input:checked + span::after {
+  background-color: #4185fa;
+  transform: translateX(16px);
+}
+/* Hover, Focus */
+.cl-switch:hover > input {
+  opacity: 0.04;
+}
+
+.cl-switch > input:focus {
+  opacity: 0.12;
+}
+
+.cl-switch:hover > input:focus {
+  opacity: 0.16;
+}
+/* Active */
+.cl-switch > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.cl-switch > input:active + span::before {
+  background-color: #8f8f8f;
+}
+
+.cl-switch > input:checked:active + span::before {
+  background-color: #85b8b7;
+}
+/* Disabled */
+.cl-switch > input:disabled {
+  opacity: 0;
+}
+
+.cl-switch > input:disabled + span::before {
+  background-color: #ddd;
+}
+
+.cl-switch > input:checked:disabled + span::before {
+  background-color: #bfdbda;
+}
+
+.cl-switch > input:checked:disabled + span::after {
+  background-color: #61b5b4;
+}
+
+/* ==================================================== */
+/* Toggle Switch End */
+/* ==================================================== */
